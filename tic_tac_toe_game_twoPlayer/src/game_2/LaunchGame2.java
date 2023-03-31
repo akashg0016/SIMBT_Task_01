@@ -2,32 +2,40 @@ package game_2;
 import java.util.Scanner;
 
 class TicTacToe{
-	static char[][] board;
+	static char[][] board = { {' ',' ', ' '}, {' ', ' ', ' '} ,{' ',' ',' ' } }; ;
+//	
+//	public TicTacToe()
+//	{
+//		board = new char[][];
+//		board =
+//		
+//		
+//		//int[][] char = { { 1, 2 }, { 3, 4 } };
+//		
+//		//initBoard();
+//	}
 	
-	public TicTacToe()
-	{
-		board = new char[3][3];
-		initBoard();
-	}
 	
-	
-	void initBoard()
-	{
-		for(int i=0; i<board.length;i++)
-		{
-			for(int j=0;j<board[i].length;j++)
-				board[i][j]=' ';
-		}
-	}
-	
+//	void initBoard()
+//	{
+//		for(int i=0; i<board.length;i++)
+//		{
+//			for(int j=0;j<board[i].length;j++)
+//				board[i][j]=' ';
+//		}
+//	}
+//	 
 	
 	static void dispBoard()
 	{
 		System.out.println("-------------");
-		for(int i=0; i < board.length;i++)
+		int i;
+		int j;
+		
+		for(i=0; i < board.length;i++)
 		{
 			System.out.print("| ");
-			for(int j=0;j<board[i].length;j++)
+			for(j=0;j<board[i].length;j++)
 			{
 				System.out.print(board[i][j] + " | ");
 			}
@@ -144,7 +152,6 @@ class HumanPlayer
 		}
 		return false;
 	}
-	
 }
 
 
